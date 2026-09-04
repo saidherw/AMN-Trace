@@ -23,6 +23,10 @@ El repositorio incluye `Dockerfile` y `render.yaml` para desplegar una demo en R
 
 Esta configuración sirve para una demo pública. En el plan gratuito, la base e imágenes locales pueden perderse cuando el servicio se reinicia; para producción se debe usar PostgreSQL y almacenamiento de objetos inmutable en la nube, con retención de cinco años.
 
+## GitHub Pages
+
+También existe una demo estática en `docs/index.html`. En GitHub: **Settings > Pages > Deploy from a branch > master > /docs > Save**. Después de unos minutos quedará disponible en `https://saidherw.github.io/AMN-Trace/`. Esta demo guarda registros sólo en el navegador de cada visitante; no es el backend productivo.
+
 ## Qué demuestra
 
 - Registro de todas las inspecciones: OK, NOK y pendiente.
