@@ -21,7 +21,7 @@ El repositorio incluye `Dockerfile` y `render.yaml` para desplegar una demo en R
 3. Confirmar el archivo `render.yaml` y lanzar el servicio.
 4. Render entregará una URL pública tipo `https://amn-trace.onrender.com`.
 
-Para una demo, el disco persistente conserva la base e imágenes. Para producción se debe reemplazar el almacenamiento local por PostgreSQL y almacenamiento de objetos inmutable en la nube.
+Esta configuración sirve para una demo pública. En el plan gratuito, la base e imágenes locales pueden perderse cuando el servicio se reinicia; para producción se debe usar PostgreSQL y almacenamiento de objetos inmutable en la nube, con retención de cinco años.
 
 ## Qué demuestra
 

@@ -7,7 +7,3 @@ services:
     envVars:
       - key: WEB_MODE
         value: "true"
-    disk:
-      name: amn-trace-data
-      mountPath: /app/data
-      sizeGB: 1
