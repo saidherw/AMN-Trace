@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: amn-trace
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: WEB_MODE
+        value: "true"
+    disk:
+      name: amn-trace-data
+      mountPath: /app/data
+      sizeGB: 1

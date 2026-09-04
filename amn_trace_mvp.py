@@ -100,5 +100,11 @@ class Handler(BaseHTTPRequestHandler):
 
 if __name__=='__main__':
     with DB_LOCK: db().close()
-    print('AMN Trace MVP: http://127.0.0.1:8080')
-    ThreadingHTTPServer(('127.0.0.1',8080),Handler).serve_forever()
+    # Compatible con despliegues cloud (Render, Railway, Fly.io, etc.).
+    # En local se conserva el puerto 8080; en cloud se usa PORT.
+    host = os.environ.get('HOST', '127.0.0.1')
+    port = int(os.environ.get('PORT', '8080'))
+    if os.environ.get('WEB_MODE') == 'true':
+        host = '0.0.0.0'
+    print(f'AMN Trace MVP: http://{host}:{port}')
+    ThreadingHTTPServer((host, port), Handler).serve_forever()

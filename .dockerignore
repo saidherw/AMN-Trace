@@ -1,0 +1,7 @@
+.git
+.gitignore
+data
+amn_trace_render
+build_amn_trace_proposal.py
+AMN_Trace_Propuesta_Implementacion_MVP.docx
+__pycache__
