@@ -1,0 +1,15 @@
+# Local runtime data and inspection evidence
+data/*.db
+data/evidence/*
+
+# Rendered document QA artifacts
+amn_trace_render/
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Local environment files
+.env
+.venv/
+venv/
